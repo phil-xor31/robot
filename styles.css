@@ -1,0 +1,59 @@
+
+#heading {
+	text-align: center;
+}
+/****Sticky Footer css ****/
+html, body {
+	height: 100%;
+	background-color: gray;
+	background-image:url('images/toborWatermark.png');
+	background-repeat: no-repeat;
+}
+
+#wrap {min-height: 100%;
+}
+
+#main {overflow:auto;
+	padding-bottom: 150px;
+}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;
+}
+/*From: http://www.cssstickyfooter.com/using-sticky-footer-code.html*/
+/*End sticky footer code*/
+
+.btn {
+	/*font-family "dot matrix"*/
+	
+	font-size: 1.5em;
+	border-radius: 10px;
+	color: white;
+	background-color: black;
+}
+
+#up {
+
+}
+
+#down {
+
+}
+
+#left {
+
+}
+
+#right {
+
+}
+
+#save {
+	color: red;
+}
+
+
+
+
