@@ -1,8 +1,11 @@
-
-#heading {
-	text-align: center;
+/*TOBOR CSS*/
+#heading { /* TOBOR name on image */
+	text-align: left;
+	color: white;
+	font-size: 1.5em;
+	font-family: sans-serif;
 }
-/****Sticky Footer css ****/
+
 html, body {
 	height: 100%;
 	background-color: gray;
@@ -10,20 +13,9 @@ html, body {
 	background-repeat: no-repeat;
 }
 
-#wrap {min-height: 100%;
+h1 {
+	font-family: sans-serif;
 }
-
-#main {overflow:auto;
-	padding-bottom: 150px;
-}  /* must be same height as the footer */
-
-#footer {position: relative;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
-	clear:both;
-}
-/*From: http://www.cssstickyfooter.com/using-sticky-footer-code.html*/
-/*End sticky footer code*/
 
 .btn {
 	/*font-family "dot matrix"*/
@@ -32,13 +24,19 @@ html, body {
 	border-radius: 10px;
 	color: white;
 	background-color: black;
+	border-left: 2px solid #ccc;
+	border-top: 2px solid #ccc;
 }
 
-#up {
+#menu {
+	background-color: green;
+	font-size: 1.5em;
+}
+#fwd {
 
 }
 
-#down {
+#back {
 
 }
 
