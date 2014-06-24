@@ -13,34 +13,37 @@
 
 <img src="images/toborWatermark.png" alt="Tobor"/>
 
-<!-- Sticky Footer -->
 
 	<!-- <button class"btn">Pick a Pattern -->
-		<h1> Please Choose:</h1>
-			<select id="menu">
-				<option>Free Form Robot Control</option>
-				<option>Pick A Readymade Pattern</option>
-				<option>Create Your Own Pattern</option>
-			</select>
-	
-	<!-- Set up Buttons -->
+	<h1> Please Choose:</h1>
+
+
+	<form id="picker" name="choices" action="roboCtrl.php" method="POST">
+		<select id="menu">
+			<option value="f">Free Form Robot Control</option>
+			<option value="r">Pick A Readymade Pattern</option>
+			<option value ="o">Create Your Own Pattern</option>
+		</select>
+	</form>
+	<!-- Set up Buttons Q: should they be in the form? Or at least the -->
+	<!-- save btn??? p329 BC PHP $_POST[] assoc array contains all the info from-->
+	<!-- the Form elements. -->
 		<br>
 		<br>
 		
 		<h1><b>Create Your Own Pattern:</b></h1>
-		<button id="fwd" class="btn">Forward</button>
-		<button id="back" class="btn">Back</button>
-		<button id="left" class="btn">Left</button>
-		<button id="right" class="btn">Right</button>
+		<h2><b>Teach the Robot!</b></h2>
+		<h4>The Robot Has Artificial Intelligence</h4>
+		<button id="fwd" value="fwd" class="btn">Forward</button>
+		<button id="back" value="back" class="btn">Back</button>
+		<button id="left" value="left" class="btn">Left</button>
+		<!-- <button id="right" value="right" class="btn">Right</button> -->
 		<br>
+		<button id="save" class="btn" name="btnsave" type="submit">Save Your Pattern</button>
+		
 		<br>
 
-		<form action="" method="post">
-			<button id="save" class="btn" type="submit">Save Your Pattern</button>
-
-
-
-
+		
 
 
 
@@ -48,8 +51,10 @@
 
 <p>&copy;Gloria Adams</p>
 
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>
 
