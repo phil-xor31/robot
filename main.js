@@ -1,49 +1,41 @@
+//TOBOR JQ
 
 $(function () {
-// Set init state to Free Form
-('.btn').addClass('.freefm');
+$.ajaxSetup({
+		type: 'POST',
+		dataType: 'JSON',
+		cache: false
+	});
 
 
-('#menu').on('change', function() {
-
-	('btn').removeClass('')
-
-});
-
-('#fwd').on('click', function() {
+$('#fwd').on('click', function() {
 	// AJAX calls in here
+	console.log("Forward was clicked");
 
 });
 
-('#back').on('click', function() {
+$('#back').on('click', function() {
 	// AJAX calls in here
-	
+	console.log("Back was clicked");
 });
 
-('#left').on('click', function() {
+$('#left').on('click', function() {
 	// AJAX calls in here
-	
+	console.log("Left was clicked");
 });
 
-('#right').on('click', function() {
+$('#right').on('click', function() {
 	// AJAX calls in here
-	
+	console.log("Right was clicked");
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 	
 });
+
+
+
+
+
