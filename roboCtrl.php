@@ -1,5 +1,4 @@
 <?php
-echo $_POST['motion'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
