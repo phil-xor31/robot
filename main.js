@@ -1,6 +1,9 @@
 //TOBOR JQ
 
 $(function () {
+
+var motion = 'motion';
+
 $.ajaxSetup({
 		type: 'POST',
 		dataType: 'JSON',
@@ -11,6 +14,19 @@ $.ajaxSetup({
 $('#fwd').on('click', function() {
 	// AJAX calls in here
 	console.log("Forward was clicked");
+
+	$.ajax({
+		url: 'roboCtrl.php',
+		type: 'POST',
+		dataType: 'TEXT',
+		cache: false,
+		data: {motion: 'fwd'},
+		success: function(returnData) {
+			// just expecting a string to be returned for debugging only
+			console.log("success");
+			console.log(returnData);
+		}
+	});
 
 });
 
