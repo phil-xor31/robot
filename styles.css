@@ -13,16 +13,23 @@ html, body {
 	background-repeat: no-repeat;
 }
 
+.ff_border {
+	border: solid black;
+	display: inline-block;
+	padding-bottom: 3px;
+}
+
 .inactive {
+	border: solid black;
 	display: none;
 }
 
-
-h2 {
-	font-family: sans-serif;
+.active {
+	border: solid black;
+	display: inline-block;
 }
 
-h3, h4 {
+h2, h3, h4 {
 	font-family: sans-serif;
 }
 
