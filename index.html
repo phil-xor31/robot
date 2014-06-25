@@ -15,32 +15,46 @@
 
 
 	<!-- <button class"btn">Pick a Pattern -->
-	<h1> Please Choose:</h1>
+	<h2> What Do You Want Me To Do?</h2>
 
 
 	<form id="picker" name="choices" action="roboCtrl.php" method="POST">
+		<!-- Q: 4:51" Brad AJAX vid says select has a name & thats what gets submitted thru POST request -->
 		<select id="menu">
 			<option value="f">Free Form Robot Control</option>
 			<option value="r">Pick A Readymade Pattern</option>
 			<option value ="o">Create Your Own Pattern</option>
 		</select>
+		<br>
+		<button id="submit" class="btn" type="submit">Submit</button>
+		<!-- ***********when Submit clicked addClass in JQ of selected dep on which option chosen ***********-->
 	</form>
-	<!-- Set up Buttons Q: should they be in the form? Or at least the -->
-	<!-- save btn??? p329 BC PHP $_POST[] assoc array contains all the info from-->
-	<!-- the Form elements. -->
-		<br>
-		<br>
-		
-		<h1><b>Create Your Own Pattern:</b></h1>
-		<h2><b>Teach the Robot!</b></h2>
-		<h4>The Robot Has Artificial Intelligence</h4>
+	
+	<div class="inactive" "f">
+		<h3>Free Form Buttons</h3>
 		<button id="fwd" value="fwd" class="btn">Forward</button>
 		<button id="back" value="back" class="btn">Back</button>
 		<button id="left" value="left" class="btn">Left</button>
-		<!-- <button id="right" value="right" class="btn">Right</button> -->
+		<button id="right" value="right" class="btn">Right</button>
+		<button id="stop" value="stop" class="btn">Stop</button>
+	</div>
+	
+		<br>
+		<br>
+	
+	<div class="inactive" "o">	
+		<h2><b>Create Your Own Pattern:</b></h2>
+		<h3><b>Teach the Robot!</b></h3>
+		<h4> >>> The Robot Has Artificial Intelligence</h4>
+		<button id="fwd" value="fwd" class="btn">Forward</button>
+		<button id="back" value="back" class="btn">Back</button>
+		<button id="left" value="left" class="btn">Left</button>
+		<button id="right" value="right" class="btn">Right</button>
+		<button id="stop" value="stop" class="btn">Stop</button>
+
 		<br>
 		<button id="save" class="btn" name="btnsave" type="submit">Save Your Pattern</button>
-		
+	</div>	
 		<br>
 
 		

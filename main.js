@@ -28,22 +28,62 @@ $('#fwd').on('click', function() {
 		}
 	});
 
-});
+}); //end forward
 
 $('#back').on('click', function() {
 	// AJAX calls in here
 	console.log("Back was clicked");
-});
+
+	$.ajax({
+		url: 'roboCtrl.php',
+		type: 'POST',
+		dataType: 'TEXT',
+		cache: false,
+		data: {motion: 'back'},
+		success: function(returnData) {
+			// just expecting a string to be returned for debugging only
+			console.log("success");
+			console.log(returnData);
+		}
+	});
+}); // end back
+
 
 $('#left').on('click', function() {
 	// AJAX calls in here
 	console.log("Left was clicked");
+	$.ajax({
+		url: 'roboCtrl.php',
+		type: 'POST',
+		dataType: 'TEXT',
+		cache: false,
+		data: {motion: 'left'},
+		success: function(returnData) {
+			// just expecting a string to be returned for debugging only
+			console.log("success");
+			console.log(returnData);
+		}
+	});
+}); // end left
 });
 
 $('#right').on('click', function() {
 	// AJAX calls in here
 	console.log("Right was clicked");
-});
+	$.ajax({
+		url: 'roboCtrl.php',
+		type: 'POST',
+		dataType: 'TEXT',
+		cache: false,
+		data: {motion: 'left'},
+		success: function(returnData) {
+			// just expecting a string to be returned for debugging only
+			console.log("success");
+			console.log(returnData);
+		}
+	});
+}); // end right
+//});
 
 
 
