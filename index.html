@@ -5,18 +5,41 @@
 	<title>TOBOR THE GREAT</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Special+Elite|Fredoka+One' rel='stylesheet' type='text/css'> -->
+
+	<!-- Try this viewport line, to Scale iPhone sizing -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" /> -->
 </head>
 <header id="heading">TOBOR</header>
 <body>
 <img src="images/toborWatermark.png" alt="Tobor"/>
 
 
-<!-- ******** START FREE FORM BUTTONS ******** -->
 
-	<h2> What Do You Want Me To Do?</h2>
+<!-- ******** START MENU PICKER ******** -->
 
+	<br>
+	<div class="active" id="trySome">
+		<h3>What Do You Want Me To Do?</h3>
+		
+		<!-- !!!!!!!!!!!remember to re-include roboCtrl.php in action= !!!!!!!!!!! -->
+		<form id="initpick" name="choices" action="" method="POST">
+			<!-- Normally, <select> has a name=" gets passed to server via POST", & a class="for CSS use". -->
+			<select id="menu1">
+				<option id="freeform" value="free">Free Form Buttons</option>
+				<option id="ready" class="option" value="ready">Pick A Readymade Pattern</option>
+				<option id="own" class="option" value ="own">Create Your Own Pattern</option>
+			</select>
+			<br>
+			<button type="button" id="select" class="btn">Select</button>
+			<br>
+			<br>
+		</form>
+	</div>
+	
 
-	<div class="ff_border">
+<!-- ******** DISPLAY FREE FORM BUTTONS WHEN FREEFORM OPTION CHOSEN ******** -->
+
+	<div class="inactive" id="ff_border">
 		<h3>Free Form Buttons</h3>
 		<button id="fwd" value="fwd" class="btn">Forward</button>
 		<button id="back" value="back" class="btn">Back</button>
@@ -24,37 +47,26 @@
 		<button id="right" value="right" class="btn">Right</button>
 		<button id="stop" value="stop" class="btn">Stop</button>
 	</div>
-	<br>
 
 
-<!-- ******** START MENU PICKER ******** -->
+<!-- ******** DISPLAY PATTERNS WHEN READYMADE PATTERN OPTION CHOSEN ******** -->
 
-	<br>
-	<h3>Try Some Other Things</h3>
-	
-	<!-- remember to re-include roboCtrl.php in action= -->
-	<form id="initpick" name="choices" action="" method="POST">
-		<!-- Q: 4:51" Brad AJAX vid says "select has a name & thats what gets submitted thru POST request" -->
-		<select id="menu">
-			<option id="ready" value="ready">Pick A Readymade Pattern</option>
-			<option id="own" value ="own">Create Your Own Pattern</option>
-		</select>
-		<br>
-		<button id="select" class="btn">Select</button>
-		<br>
-		<br>
-	
-
-<!-- ******** DISPLAY WHEN READYMADE PATTERN IS CHOSEN ******** -->
-
-	<div class="inactive" "rdy">
-		<h3>Accessing Database For Readymade Pattern</h3>
+	<div class="inactive" id="rdy">
+		<!-- <h3><i>Accessing Database For Readymade Pattern</i></h3> -->
+		<form action="" method="POST">
+			<select id="menu2">
+				<option id="square" value="sqr">Square Pattern</option>
+				<option id="fig8" value="figure8">Figure 8 Pattern</option>
+			</select>
+			<br>
+			<button type="button" id="select" class="btn">Send To DB</button>
+		</form>
 	</div>
 
 
-<!-- ******** DISPLAY WHEN CREATE YOUR OWN PATTERN IS CHOSEN ******** -->
+<!-- ******** DISPLAY WHEN CREATE YOUR OWN PATTERN OPTION CHOSEN ******** -->
 
-	<div class="inactive" "ownptn">	
+	<div class="inactive" id="ownptn">	
 		<h2><b>Create Your Own Pattern:</b></h2>
 		<h3><b>Teach the Robot!</b></h3>
 		<h4> >>> The Robot Has Artificial Intelligence</h4>
@@ -70,13 +82,10 @@
 	</div>	
 		
 
-		
 
 
 
-
-
-<p>&copy;Gloria Adams</p>
+<p>&copy; G. Adams</p>
 
 <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
