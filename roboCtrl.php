@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if ($_POST['motion'] == 'fwd')
 	{
-		exec('sudo python python/rrForward.py');
+		exec('sudo python /var/www/robot/python/rrForward.py'); //executes outside webserver enviro, so dont know dir wo full path.
 		echo 'Forward Received';
 	}
 	else if ($_POST['motion'] == 'back')

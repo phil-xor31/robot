@@ -76,7 +76,7 @@ $(function () {
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
-			data: {motion: 'left'},
+			data: {motion: 'right'},
 			success: function(returnData) {
 				// just expecting a string to be returned for debugging only
 				console.log("success");

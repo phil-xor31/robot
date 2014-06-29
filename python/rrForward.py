@@ -8,5 +8,5 @@ atexit.register(GPIO.cleanup)
 rr.set_led1(1)
 rr.set_led2(1)
 
-#add 1 in forward(1) for 1 sec.
-rr.forward(2)
+# Ex: add 1 in forward(1) for 1 sec.
+rr.forward(0.25)

@@ -1,5 +1,5 @@
 /*TOBOR CSS*/
-#heading { /* TOBOR name on image */
+#heading { /* TOBOR name above image */
 	text-align: left;
 	color: white;
 	font-size: 1.5em;
@@ -10,7 +10,7 @@ html, body {
 	height: 100%;
 	background-color: gray;
 	/*background-image:url('images/toborWatermark.png');*/
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;*/
 }
 
 .ff_border {
