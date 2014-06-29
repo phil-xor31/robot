@@ -34,6 +34,10 @@ h2, h3, h4 {
 	font-family: sans-serif;
 }
 
+#rdy h3 {
+	font-size: 2em;
+}
+
 .btn {
 	/*font-family "dot matrix"*/
 	
@@ -65,9 +69,9 @@ h2, h3, h4 {
 	color: yellow;
 }
 
-button #select {
+/*button #select {
 	padding-left: 20px;
-}
+}*/
 
 
 

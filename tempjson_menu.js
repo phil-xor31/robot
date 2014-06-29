@@ -47,7 +47,7 @@ $(function() {
 					dataType: 'JSON',
 					cache: false,
 					data: {'rdymade': 'rdyptn'},
-					success: function(data) //data = expecting array $readyptn from readymade.php
+					success: function(data)
 					{
 						// console.log(data);
 						$('#menu2').html('');
@@ -67,35 +67,14 @@ $('#selMenu2').on('click', function() {
 
 		var selection = $('#menu2').find(':selected').val();
 
+		$('#rdy').addClass('inactive');
+		$('#rdy').removeClass('active');
+
 		// nxt: Do Ajax call to send the selected pattern
 		//from array $readyptn (in json format inside readymade.php)to runReadyMade.php.
 		// runReadyMade.php will access mySQL & retrieve pattern assc w that pattern name.
-		$.ajax({
-			url: 'runReadyMade.php',
-			type: 'POST',
-			dataType: 'TEXT',
-			cache: false,
-			data: {"pattern": selection},
-			success: function(returnData) {
-				// just expecting a string to be returned for debugging only
-				console.log("success");
-				console.log(returnData);
-			}
-		});
+
 	});
 
 
 }); // end menu.js
-
-
-
-
-
-
-
-
-
-
-
-
-
