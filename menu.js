@@ -15,19 +15,31 @@ $(function() {
 		if (selection == "free") {
 			$('#ff_border').addClass('active');
 			$('#ff_border').removeClass('inactive');
+
+			$('.btnHome').click(function() {
+             location.reload();
+       });
 			console.log("freeform done");
 		}
 
-		if (selection == "ready") {
+		else if (selection == "ready") {
 			getPatternNames(); //AJAX call
 			$('#rdy').addClass('active');
 			$('#rdy').removeClass('inactive');
+
+			$('.btnHome').click(function() {
+             location.reload();
+       });
 			console.log("ready done");
 		}
 
-		if(selection == "own") {
+		else if (selection == "own") {
 			$('#ownptn').addClass('active');
 			$('#ownptn').removeClass('inactive');
+
+			$('.btnHome').click(function() {
+             location.reload();
+       });
 			console.log("own done");
 		}
 
@@ -35,9 +47,9 @@ $(function() {
 
 // *********START MGMT READYMADE PATTERNS *************//
 
-// This function is called above in the click handler for #selMenu1.
+// This AJAX function is called above in the click handler for #selMenu1.
 // See code: if (selection == "ready").
-// It does Ajax call to make the <option> tags from array $readyptn in readymade.php.
+// It does Ajax call to Dynamically make the <option> tags from array $readyptn in readymade.php.
 	var getPatternNames = function() {
 
 		$.ajax(
@@ -67,8 +79,8 @@ $('#selMenu2').on('click', function() {
 
 		var selection = $('#menu2').find(':selected').val();
 
-		// nxt: Do Ajax call to send the selected pattern
-		//from array $readyptn (in json format inside readymade.php)to runReadyMade.php.
+		// nxt: Do Ajax call to send the selected pattern,
+		//from array $readyptn (in json format inside readymade.php) to runReadyMade.php.
 		// runReadyMade.php will access mySQL & retrieve pattern assc w that pattern name.
 		$.ajax({
 			url: 'runReadyMade.php',

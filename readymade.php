@@ -1,4 +1,7 @@
 <?php
+
+
+
 // Include Database Class
 include('db.php');
 
@@ -11,7 +14,7 @@ $results = $connection->execute("SELECT pattern.name from pattern");
 $readyptn = Array(); // empty array
 // Dumping pattern names table into array one row at time
 while ($row = $results->fetch_assoc()) {
-	array_push($readyptn, $row['name']); //name is key, value is "Circle"
+	array_push($readyptn, $row['name']); // Ex: name is key, value is "Circle"
  }
 
 //JSON encode the php array and return it to menu.js
