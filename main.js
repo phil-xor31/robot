@@ -2,7 +2,33 @@
 
 $(function () {
 
+  //
+  // MJPEG Webcam interface
+  //
+  var mjpeg_img;
+ 
+  function reload_img () {
+    mjpeg_img.prop('src', 'cam_pic.php?time=' + new Date().getTime());
+  }
 
+  function error_img () {
+    setTimeout("mjpeg_img.prop('src', 'cam_pic.php?time=' + new Date().getTime());", 100);
+  }
+
+  function init() {
+
+    // mjpeg
+    mjpeg_img = $("#mjpeg_dest");
+    mjpeg_img.load(reload_img);
+    mjpeg_img.error(error_img);
+    reload_img();
+  
+  }
+
+
+  init();
+
+  // End of Webcam interface
 
 	var motion = 'motion';
 
