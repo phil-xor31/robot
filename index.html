@@ -7,95 +7,96 @@
 	<!-- <link href='http://fonts.googleapis.com/css?family=Special+Elite|Fredoka+One' rel='stylesheet' type='text/css'> -->
 
 	<!-- Try this viewport line, to Scale iPhone sizing -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
 </head>
-<header id="heading">TOBOR</header>
 <body>
-<!-- <img src="images/toborWatermark.png" alt="Tobor"/> -->
-  <div><img id="mjpeg_dest"></div>
+	<center>
+		<header id="heading">TOBOR</header>
+		<!-- <img src="images/toborWatermark.png" alt="Tobor"/> -->
+	  <div><img id="mjpeg_dest"></div>
 
 
 
-<!-- ******** START MENU PICKER ******** -->
+	<!-- ******** START MENU PICKER ******** -->
 
-	<br>
-	<div class="active" id="trySome">
-		<h3>What Do You Want Me To Do?</h3>
-		
-		<!-- !!!!!!!!!!!remember to re-include roboCtrl.php in action= !!!!!!!!!!! -->
-		<form id="initpick" name="choices" action="" method="POST">
-			<!-- Normally, <select> has a name=" gets passed to server via POST", & a class="for CSS use". -->
-			<select id="menu1">
-				<option id="freeform" value="free">Free Form Buttons</option>
-				<option id="ready" class="option" value="ready">Pick A Readymade Pattern</option>
-				<option id="own" class="option" value ="own">Create Your Own Pattern</option>
-			</select>
-			<br>
-			<button type="button" id="selMenu1" class="btn">Select</button>
-			<br>
-			<br>
-		</form>
-	</div>
-	
-
-<!-- ******** DISPLAY FREE FORM BUTTONS WHEN FREEFORM OPTION CHOSEN ******** -->
-
-	<div class="inactive" id="ff_border">
-		<h3>Free Form Buttons</h3>
-		<button id="fwd" value="fwd" class="btn">Forward</button>
-		<button id="back" value="back" class="btn">Back</button>
-		<button id="left" value="left" class="btn">Left</button>
-		<button id="right" value="right" class="btn">Right</button>
-		<button id="stop" value="stop" class="btn">Stop</button>
 		<br>
-		<button class="btnHome btn">Home</button>
-	</div>
+		<div class="active" id="trySome">
+			<h3>What Do You Want Me To Do?</h3>
+			
+			<!-- !!!!!!!!!!!remember to re-include roboCtrl.php in action= !!!!!!!!!!! -->
+			<form id="initpick" name="choices" action="" method="POST">
+				<!-- Normally, <select> has a name=" gets passed to server via POST", & a class="for CSS use". -->
+				<select id="menu1">
+					<option id="freeform" value="free">Free Form Buttons</option>
+					<option id="ready" class="option" value="ready">Pick A Readymade Pattern</option>
+					<option id="own" class="option" value ="own">Create Your Own Pattern</option>
+				</select>
+				<br>
+				<button type="button" id="selMenu1" class="btn">Select</button>
+				<br>
+				<br>
+			</form>
+		</div>
+		
 
+	<!-- ******** DISPLAY FREE FORM BUTTONS WHEN FREEFORM OPTION CHOSEN ******** -->
 
-<!-- ******** DISPLAY PATTERNS WHEN READYMADE PATTERN OPTION CHOSEN ******** -->
-
-	<div class="inactive" id="rdy">
-		<h3><i>Choose Pattern To Access Database</i></h3>
-		<form action="">
-			<select name="rdymade" id="menu2">
-			</select>
+		<div class="inactive" id="ff_border">
+			<h3>Free Form Buttons</h3>
+			<button id="fwd" value="fwd" class="btn">Forward</button>
+			<button id="back" value="back" class="btn">Back</button>
+			<button id="left" value="left" class="btn">Left</button>
+			<button id="right" value="right" class="btn">Right</button>
+			<button id="stop" value="stop" class="btn">Stop</button>
 			<br>
-			<button type="button" id="selMenu2" class="btn">Select</button>
 			<button class="btnHome btn">Home</button>
-		</form>
-	</div>
+		</div>
 
 
-<!-- ******** DISPLAY WHEN CREATE YOUR OWN PATTERN OPTION CHOSEN ******** -->
+	<!-- ******** DISPLAY PATTERNS WHEN READYMADE PATTERN OPTION CHOSEN ******** -->
 
-	<div class="inactive" id="ownptn">	
-		<h2><b>Create Your Own Pattern:</b></h2>
-		<h3><b>Teach the Robot!</b></h3>
-		<h4> >>> The Robot Has Artificial Intelligence</h4>
-		<button id="fwd" value="fwd" class="btn">Forward</button>
-		<button id="back" value="back" class="btn">Back</button>
-		<button id="left" value="left" class="btn">Left</button>
-		<button id="right" value="right" class="btn">Right</button>
-		<button id="stop" value="stop" class="btn">Stop</button>
-
-		<br>
-		<button id="save" class="btn" name="btnsave" type="submit">Save Your Pattern</button>
-		<br>
-		<br>
-		<button class="btnHome btn">Home</button>
-	</div>	
-		
+		<div class="inactive" id="rdy">
+			<h3><i>Choose Pattern To Access Database</i></h3>
+			<form action="">
+				<select name="rdymade" id="menu2">
+				</select>
+				<br>
+				<button type="button" id="selMenu2" class="btn">Select</button>
+				<button class="btnHome btn">Home</button>
+			</form>
+		</div>
 
 
+	<!-- ******** DISPLAY WHEN CREATE YOUR OWN PATTERN OPTION CHOSEN ******** -->
+
+		<div class="inactive" id="ownptn">	
+			<h2><b>Create Your Own Pattern:</b></h2>
+			<h3><b>Teach the Robot!</b></h3>
+			<h4> >>> The Robot Has Artificial Intelligence</h4>
+			<button id="fwd" value="fwd" class="btn">Forward</button>
+			<button id="back" value="back" class="btn">Back</button>
+			<button id="left" value="left" class="btn">Left</button>
+			<button id="right" value="right" class="btn">Right</button>
+			<button id="stop" value="stop" class="btn">Stop</button>
+
+			<br>
+			<button id="save" class="btn" name="btnsave" type="submit">Save Your Pattern</button>
+			<br>
+			<br>
+			<button class="btnHome btn">Home</button>
+		</div>	
+			
 
 
-<p>&copy; G. Adams</p>
 
-<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="menu.js"></script>
-	<script type="text/javascript" src="main.js"></script>
 
+	<p>&copy; G. Adams</p>
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="menu.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</center>
 </body>
 </html>
 

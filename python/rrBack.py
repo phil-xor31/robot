@@ -1,8 +1,10 @@
 from raspirobotboard import *
 rr = RaspiRobot()
 
-import atexit
-atexit.register(GPIO.cleanup)
+#import atexit
+#atexit.register(GPIO.cleanup)
+
+GPIO.setwarnings(False)
 
 #rr.test()
 rr.set_led1(1)
