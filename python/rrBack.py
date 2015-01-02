@@ -1,14 +1,26 @@
+"""
+	rrBack.py 
+	Move backward. Accepts one parameter on command line for 
+	time duration to move. With no parameters, robot will maintain motion
+"""
+import sys
+import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
 from raspirobotboard import *
 rr = RaspiRobot()
 
-#import atexit
-#atexit.register(GPIO.cleanup)
+num_args = len(sys.argv)
+if num_args > 1:
+	try:
+		duration = float(sys.argv[1])
+		print duration
+		rr.reverse(duration)
+	except ValueError:
+		print "Not a number"
+		rr.reverse()
+else:
+	rr.reverse()
 
-GPIO.setwarnings(False)
-
-#rr.test()
 rr.set_led1(1)
 rr.set_led2(1)
 
-#add 1 in forward(1) for 1 sec.
-rr.reverse(0.25)

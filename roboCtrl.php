@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if ($_POST['motion'] == 'fwd')
 	{
-		exec('sudo python /var/www/robot/python/rrForward.py'); //executes outside webserver enviro, so dont know dir wo full path.
+		exec('sudo python python/rrForward.py'); 
 		echo 'Forward Received';
 	}
 	else if ($_POST['motion'] == 'back')
@@ -14,13 +14,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	}
 	else if ($_POST['motion'] == 'left')
 	{
-		exec('sudo python python/rrLeft.py');
+		exec('sudo python python/rrLeft.py 0.22');
+		if ($_POST['state'] == "running") 
+		{
+			// resume forward movement
+			exec('sudo python python/rrForward.py');
+		}
 		echo 'Left Received';
 	}
 	else if ($_POST['motion'] == 'right')
 	{
-		exec('sudo python python/rrRight.py');
+		exec('sudo python python/rrRight.py 0.22');
+		if ($_POST['state'] == "running") 
+		{
+			// resume forward movement
+			exec('sudo python python/rrForward.py');
+		}
 		echo 'Right Received';
+	}
+	else if ($_POST['motion'] == 'stop')
+	{
+		exec('sudo python python/rrStop.py');
+		echo 'Stop Received';
 	}
 
 }

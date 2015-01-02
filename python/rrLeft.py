@@ -1,16 +1,28 @@
+"""
+	rrLeft.py 
+	Move Left. Accepts one parameter on command line for 
+	time duration to move. With no parameters, robot will maintain motion
+	we send the rr.right command to move left because of the orientation
+	of the board.
+"""
+import sys
+import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
 from raspirobotboard import *
 rr = RaspiRobot()
 
-#import atexit
-#atexit.register(GPIO.cleanup)
-
-GPIO.setwarnings(False)
+num_args = len(sys.argv)
+if num_args > 1:
+	try:
+		duration = float(sys.argv[1])
+		#print duration
+		rr.right(duration)
+	except ValueError:
+		#print "Not a number"
+		rr.right()
+else:
+	rr.right()
 
 rr.set_led1(1)
 rr.set_led2(0)
 
-#add 1 in left(1) for 1 sec.
-#S Monk got rrLeft & rrRight() mixed up so I am for now changing this,
-#when I click L btn, the robot actually goes R (so I am quick fix chging this
-# here.
-rr.right(0.22)

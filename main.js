@@ -30,7 +30,7 @@ $(function () {
 
   // End of Webcam interface
 
-	var motion = 'motion';
+	var currentState = 'stopped';
 
 	$.ajaxSetup({
 			type: 'POST',
@@ -42,13 +42,14 @@ $(function () {
 	$('#fwd').on('click', function() {
 		// AJAX calls in here
 		console.log("Forward was clicked");
+		currentState = "running";
 
 		$.ajax({
 			url: 'roboCtrl.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
-			data: {motion: 'fwd'},
+			data: {motion: 'fwd', state: currentState},
 			success: function(returnData) {
 				// just expecting a string to be returned for debugging only
 				console.log("success");
@@ -61,13 +62,14 @@ $(function () {
 	$('#back').on('click', function() {
 		// AJAX calls in here
 		console.log("Back was clicked");
+		currentState = "running";
 
 		$.ajax({
 			url: 'roboCtrl.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
-			data: {motion: 'back'},
+			data: {motion: 'back', state: currentState},
 			success: function(returnData) {
 				// just expecting a string to be returned for debugging only
 				console.log("success");
@@ -85,7 +87,7 @@ $(function () {
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
-			data: {motion: 'left'},
+			data: {motion: 'left', state: currentState},
 			success: function(returnData) {
 				// just expecting a string to be returned for debugging only
 				console.log("success");
@@ -102,7 +104,7 @@ $(function () {
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
-			data: {motion: 'right'},
+			data: {motion: 'right', state: currentState},
 			success: function(returnData) {
 				// just expecting a string to be returned for debugging only
 				console.log("success");
@@ -110,6 +112,25 @@ $(function () {
 			}
 		});
 	}); // end right
+
+	$('#stop').on('click', function() {
+		// AJAX calls in here
+		console.log("Stop was clicked");
+		currentState = 'stopped';
+		
+		$.ajax({
+			url: 'roboCtrl.php',
+			type: 'POST',
+			dataType: 'TEXT',
+			cache: false,
+			data: {motion: 'stop'},
+			success: function(returnData) {
+				// just expecting a string to be returned for debugging only
+				console.log("success");
+				console.log(returnData);
+			}
+		});
+	}); // end stop
 
 
 	
