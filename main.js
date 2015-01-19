@@ -45,7 +45,7 @@ $(function () {
 		currentState = "running";
 
 		$.ajax({
-			url: 'roboCtrl.php',
+			url: 'roboCmd.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
@@ -65,7 +65,7 @@ $(function () {
 		currentState = "running";
 
 		$.ajax({
-			url: 'roboCtrl.php',
+			url: 'roboCmd.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
@@ -83,7 +83,7 @@ $(function () {
 		// AJAX calls in here
 		console.log("Left was clicked");
 		$.ajax({
-			url: 'roboCtrl.php',
+			url: 'roboCmd.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
@@ -100,7 +100,7 @@ $(function () {
 		// AJAX calls in here
 		console.log("Right was clicked");
 		$.ajax({
-			url: 'roboCtrl.php',
+			url: 'roboCmd.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
@@ -119,7 +119,7 @@ $(function () {
 		currentState = 'stopped';
 		
 		$.ajax({
-			url: 'roboCtrl.php',
+			url: 'roboCmd.php',
 			type: 'POST',
 			dataType: 'TEXT',
 			cache: false,
