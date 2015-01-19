@@ -10,6 +10,11 @@
     sonar sensor, gps, etc.
 
     Requires raspirobotboard python library to be installed.
+    This script can be started when the pi boots by adding this 
+    line to /etc/rc.local
+
+    /usr/bin/python /home/pi/robot/python/rrControl.py &
+
 
 """
 import os, time, sys
